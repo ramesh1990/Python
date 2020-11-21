@@ -11,21 +11,17 @@ def sortsqar(lst):
     n = len(lst)
     retVal = list(range(n))
     
-    i,j = 0,n-1
+    left,right = 0,n-1
     ind = n-1
     
-    while i <= j :
-        if abs(lst[i]) > abs(lst[j]) :
-            s = lst[i] * lst[i]
-            retVal[ind] = s
-            print (s)
-            i += 1
+    for i in range(n-1,-1,-1) :
+        if abs(lst[left]) > abs(lst[right]) :
+            retVal[i] = lst[left] * lst[left]
+            left += 1
         else :
-            s = lst[j] * lst[j]
-            print (s)
-            retVal[ind] = s
-            j -= 1
-        ind -= 1
+            retVal[i] = lst[right] * lst[right]
+            right -= 1
+            
     return retVal
     
     
