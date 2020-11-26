@@ -30,6 +30,6 @@ def missingNumber(arr):
    # return sum(range(1,len(arr)+2)) - sum(arr)
     # method 2 
     l = len(arr)
-    return l*(l+1)//2 - sum(a) 
+    return (l+1)*(n+2)//2 - sum(a) 
 
 print ("\n Msissing one Number in the range Array ",missingNumber([1,2,3,5]))
